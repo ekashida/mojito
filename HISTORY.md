@@ -10,6 +10,14 @@ Deprecations
 Features
 ------------
 * Upgraded to YUI 3.9.0
+* [issue #979](/yahoo/mojito/issues/979):
+  * The `mojito-handler-tunnel` middleware was refactored into a middleware
+    substack that more loosely couples the parsing and handling phases of a
+    tunnel request. This means that applications can override and customize
+    tunnel behavior more easily.
+  * The URL is now customizable per request using the `tunnelUrl` option for
+    `mojitProxy.invoke()`, but is still subject to the `tunnelPrefix`
+    restriction.
 
 Bug Fixes
 ------------
